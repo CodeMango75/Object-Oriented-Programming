@@ -42,6 +42,44 @@ print(Mycar)
 print(f'''The car I got for myself is {Car1.car}. It has an Engine Displacement of {Car1.displacement}. It was made 
 in {Car1.make} and the model is {Car1.model}''')
 ```
+**Example 2**:
+```commandline
+class Mycar:
+    def __init__(self, make, car, model, displacement):
+        # Assigning values to instance attributes
+        self.make = make
+        self.car = car
+        self.model = model
+        self.displacement = displacement
+
+    def get_car_info(self):
+        # Accessing instance attributes within a method
+        return f"The car I got is {self.car}. It is {self.model} which has an Engine Displacement of {self.displacement}. It is made in {self.make}"
+
+# Create an instance of Mycar with the desired values
+car1 = Mycar(2023, "Mercedes Benz Rappot", "Sedan", "2800cc")
+
+# Access the attributes and use them in a method
+car_info = car1.get_car_info()
+print(car_info)
+```
+**Example 3**:
+```commandline
+class Phone:
+    def __init__(self,model,year,battery,camera,dimensions):
+        self.model = model
+        self.year = year
+        self.battery = battery
+        self.camera = camera
+        self.dimensions = dimensions
+    def myPhone(self):
+        return f'''I purchased {self.model} back in {self.year}. At that time, It had a battery life of 
+{self.battery}%. It comes with {self.camera} megapixels and its Screen size is {self.dimensions} inches'''
+# Create Instance of Phone
+IPhone = Phone("Iphone XS Max", "2022","90",16,5.5)
+Phone_Info = IPhone.myPhone()
+print(Phone_Info)
+```
 **Note** : In Python, it's a convention (not a rule) to name classes using CamelCase,
 which means starting with an uppercase letter.
 
