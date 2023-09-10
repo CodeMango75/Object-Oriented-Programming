@@ -29,14 +29,18 @@ Book, Library, and Member, making your code more organized and intuitive.
 * So a class is a template of object and an object is an instance of class. 
 * When individual objects are created, they inherit all variable and functions from that class. 
 ```commandline
-class Dog:
-    def __init__(self, name, breed):
-        self.name = name
-        self.breed = breed
-
-# Creating objects of the class
-dog1 = Dog("Buddy", "Golden Retriever")
-dog2 = Dog("Rex", "German Shepherd")
+class Mycar:
+    def __init__(self,make,car,model,displacement):
+        self.make = make
+        self.car = car
+        self.model = model
+        self.displacement = displacement
+# When creating an instance of the class, you should pass the values as arguments to the constructor, 
+not directly in the class definition.        
+Car1 = Mycar(2023,"Mercedes","Benz 7","2800cc")
+print(Mycar)
+print(f'''The car I got for myself is {Car1.car}. It has an Engine Displacement of {Car1.displacement}. It was made 
+in {Car1.make} and the model is {Car1.model}''')
 ```
 **Note** : In Python, it's a convention (not a rule) to name classes using CamelCase,
 which means starting with an uppercase letter.
