@@ -1,0 +1,26 @@
+class Phone:
+    def __init__(self, model, year, battery, camera, dimensions):
+        self.model = model
+        self.year = year
+        self.battery = battery
+        self.camera = camera
+        self.dimensions = dimensions
+
+    def myPhone(self):
+        return f'''I purchased {self.model} back in {self.year}. At that time, It had a battery life of 
+{self.battery}%. It comes with {self.camera} megapixels, and its screen size is {self.dimensions} inches'''
+
+# Create instances of the Phone class with different phone models and attributes
+IPhone = Phone("Iphone XS Max", "2022", "90", 16, 5.5)
+Samsung = Phone("Samsung Galaxy Note 20", "2022", "100", 48, 7.5)
+OnePlus = Phone("One Plus Pro", "2023", "95", 38, 6)
+
+# Get information about each phone
+Iphone_Info = IPhone.myPhone()
+Samsung_Info = Samsung.myPhone()
+OnePlus_Info = OnePlus.myPhone()
+
+# Print all
+print(Iphone_Info)
+print(Samsung_Info)
+print(OnePlus_Info)
